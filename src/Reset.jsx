@@ -21,7 +21,7 @@ const [stCode,setStcode] = useState()
 let loadData = async ()=>{
   
 try {
-  let verifiction = await axios.get("https://nodejspasswordreset.herokuapp.com//token-verify",{
+  let verifiction = await axios.get("https://nodejspasswordreset.herokuapp.com/token-verify",{
   headers:{
 'authorization':token
   }
@@ -60,7 +60,7 @@ try {
         onSubmit: async (values)=>{
     try {
       console.log(values)
-  await axios.put("https://nodejspasswordreset.herokuapp.com//update",values,{
+  await axios.put("https://nodejspasswordreset.herokuapp.com/update",values,{
     headers:{
       'authorization':token
     }
